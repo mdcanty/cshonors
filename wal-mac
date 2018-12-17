@@ -1,0 +1,32 @@
+#!/bin/bash
+
+input=$1
+
+function random-wal () {
+   wal -e -i ~/Pictures/papes/$(ls ~/Pictures/papes/ | gshuf -n1) 
+}
+
+function recent-wal () {
+   wal -e -i ~/Pictures/papes/$(ls -Art ~/Pictures/papes/ | tail -n1) 
+ } 
+
+
+ 
+
+
+case $input in
+	--random|-r)
+		random-wal
+		;;
+	--recent|-re)
+		recent-wal
+		;;
+	*)
+		echo "Bad option. 'recent' and 'random' work."
+		;;
+esac
+exit 0
+
+
+
+
