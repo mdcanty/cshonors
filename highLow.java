@@ -9,7 +9,8 @@ public class highLow extends ConsoleProgram {
     int points = 1000; int risk = 0; int prediction = 0; int guess = 0;
       
       println("High Low Game");
-
+      println();
+      
       println("RULES");
       println("Numbers 1 through 6 are low");
       println("Number 7 is neither high nor low");
@@ -25,7 +26,6 @@ public class highLow extends ConsoleProgram {
           }
           
           else {
-        
             prediction = readInt("Enter prediction: ");
             risk = readInt("Enter amount of cash you want to risk: ");
             points = play(points, risk, prediction);
@@ -36,7 +36,7 @@ public class highLow extends ConsoleProgram {
 
 
 
-public int play(int points, int risk, int prediction) {
+    public int play(int points, int risk, int prediction) {
         
         RandomGenerator rg = new RandomGenerator();
         int num = rg.nextInt(1, 13);
@@ -47,25 +47,26 @@ public int play(int points, int risk, int prediction) {
                 println("You win " + risk + " points");
                 points = points + risk;
 
-                return points;
+                return (points);
         }
 
         else if ((num >= 8) && (prediction == 1)) {
                 println("You win " + risk + " points");
                 points = points + risk;
 
-                return points;
+                return (points);
         }
 
         else {
                 println("You lose " + risk + " points");
                 points = points - risk;
-                return points;
+                return (points);
         }
 
 
 }
 }
+
 
 
 
