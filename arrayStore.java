@@ -4,7 +4,7 @@ import java.text.NumberFormat;
 public class arrayStore extends ConsoleProgram {
     public void run () {
         int howmanyItems = readInt("How many different items?: ");
-        double percentMarkup = readDouble("Enter % markup: ")*.01;
+        double percentMarkup = readDouble("Enter % markup: ") * .01;
 
         String itemType [] = new String[howmanyItems];
         double itemCost [] = new double[howmanyItems];
