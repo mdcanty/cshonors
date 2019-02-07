@@ -1,4 +1,4 @@
-import acm.program.*;
+limport acm.program.*;
 
 public class computerStore extends ConsoleProgram {
     public void run () {
