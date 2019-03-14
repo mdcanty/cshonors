@@ -13,17 +13,18 @@ public class bigAndSmall extends GraphicsProgram {
         GOval circle = new GOval(100, 100);
         circle.setColor(Color.BLACK);
         circle.setVisible(true);
+        circle.setFilled(true);
         add(circle);
 
         do {
             RandomGenerator rg = new RandomGenerator();
-            circle.setLocation(rg.nextInt(0, 1000), rg.nextInt(0, 1000));
+            circle.setLocation(rg.nextInt(0, 600), rg.nextInt(0, 600));
             x++;
             pause(1000);
 
         } while (x < 5);
         
-        circle.setLocation(500, 500);
+        circle.setLocation(500, 300);
         
         for (int y = 1; x < 275; x++) {
             circle.scale(1.01);
