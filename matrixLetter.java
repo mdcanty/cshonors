@@ -7,12 +7,9 @@ public class matrixLetter extends ConsoleProgram {
         String matrix[][] = new String[5][5];
         String sym = "*";
         int pick = 0;
-        
-
         for (int i = 0; i < matrix.length; i++) {
             Arrays.fill(matrix[i], (sym));
-        }
-
+        } 
         for (int row = 0; row < matrix.length; row++) {
             for (int column = 0; column < matrix.length; column++) {
                 print("[" + matrix[row][column] + "]");
@@ -81,14 +78,5 @@ public class matrixLetter extends ConsoleProgram {
             println("You failed.");
             
         } while (pick < 5);
-
-
-
-
-
-
-
-
-
     }
 }
